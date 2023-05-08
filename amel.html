@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap PR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="btn-group" role="group" >
+        <table class="table table-bordered border-success " >
+            <tr>
+                <td class="table-secondary" colspan="4" id="hasil">0</td>
+            </tr>
+            <tr>
+                <td class="table-success" colspan="3"><button type="button" class="btn btn-success-subtle" onclick="insert(this);">DELETE</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn btn-success-subtle" onclick="insert(this);">7</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">8</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">9</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">4</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">5</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">6</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">1</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">2</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">3</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">0</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">00</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">.</button></td>
+                <td><button type="button" class="btn btn-outline-success-subtle" onclick="insert(this);">=</button></td>
+            </tr>
+        </table>
+    </div>
+
+<script>
+    var hasil = document.getElementById('hasil');
+     
+    function insert(angka) 
+    {
+         
+        var pushed = angka.innerHTML;
+         
+        if (pushed == '=') {
+            // dihitunggg
+            hasil.innerHTML = eval(hasil.innerHTML);
+             
+        } else if (pushed == 'DELETE') {
+            // hapusss
+            hasil.innerHTML = '0';
+        
+        } else {
+            if (hasil.innerHTML == '0') {
+                hasil.innerHTML = pushed;
+                 
+            } else {
+                hasil.innerHTML += pushed;   
+            }
+        }
+    }
+</script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+</html>

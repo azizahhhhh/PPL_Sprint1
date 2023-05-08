@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <div>100</div>
+    <div>100</div>
+    <div>100</div> -->
+
+    <script>
+
+        // document.write(a, "<br>");
+        // a = a % 3;
+        // document.write(a);
+
+        //switch untuk value yg pasti 
+        // kalo range pake if 
+
+        //var a = 10;
+        // if (a >= 10 ){
+        //     document.write("besar");
+        // } else {
+        //     document.write("kecil");
+        // }
+
+        /*switch(a) {
+            case 10:
+                document.write("besar");
+                //break;
+            case 15:
+                document.write("sangat besar");
+                break;
+            default:
+                document.write("bingung");      
+        }*/
+
+        //1-1000
+        // for(var i = 1; i <= 1000; i++) {
+        //     document.write(i, '<br>');
+        // }
+
+        //hanya angka genap 
+        // for(var i = 1; i <= 1000; i++)
+        // {
+        //     if(i % 2 == 0)
+        //     {
+        //         document.write(i, '<br>')
+        //     }
+        // }
+
+        // for(var i = 2; i <= 1000; i+=2)
+        // {
+        //     document.write(i, '<br>')
+        // }
+
+        //1-1000
+        // var i =1;
+        // while (i <= 1000) {
+        //     document.write(i++, '<br>');
+        // }
+
+        //mencari angka genap
+        // var i = 0;
+        // while (i <= 1000) 
+        // {
+        //     document.write(i = i + 2, '<br>');
+        // }
+
+
+
+
+    // var a = document.getElementsByTagName('div'); //mengambil semua yg dijepit tag div
+    // document.wite(a[0].innerHTML); //kalo diisi 0 maka muncul div ke 0, kalo diisi 1 maka 
+    
+    //Latsol
+    for(var i = 1; i<= 1000; i++) {
+        document.write("<div>", i, "</div>")
+    }
+
+    var a = document.getElementsByTagName('div');
+    for (var i = 0; i < 1000; i += 2) {
+        a[i].innerHTML = "Ganjil";
+    }
+
+    </script>
+</body>
+</html>

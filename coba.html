@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tugas Kalkulator</title>
+        <style>
+            body{
+                background: #53607c;
+                font-family: roboto;
+            }
+ 
+            .kalkulator{
+                width: 335px;
+                background: #6da5ca;
+                margin: 100px auto;
+                padding: 10px 20px 50px 20px;
+                border-radius: 5px;
+                box-shadow: 0px 10px 20px 0px #bab8b8;
+            }
+            
+            .bil{
+                width: 300px;
+                margin: 5px;
+                border: none;
+                font-size: 16pt;
+                border-radius: 5px;
+                padding: 10px;	
+            }
+
+            p{
+                color:#eee;
+            }
+            
+            .opt{
+                font-size: 16pt;
+                border: none;
+                width: 215px;
+                margin: 5px;
+                border-radius: 5px;
+                padding: 10px;
+            }
+            
+            .tombol{
+                background: #e14a52;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                color: #eee;
+                font-size: 15pt;
+                border-bottom:4px solid #ab4545;
+            }
+            
+            .judul{
+                text-align: center;
+                color: #eee;
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="kalkulator">
+        <div align="center">
+            <h1 class="judul">Kalkulator</h1>
+            <form name="form1" action="#">
+                <p>Angka 1 <input type="text" name="bil1" class="bil"></p>
+                <p>Operator <select name="opt"></p>
+                    <option value="tambah"> +</option>
+                    <option value="kurang"> -</option>
+                    <option value="kali"> *</option>
+                    <option value="bagi"> /</option>
+                    </select>
+                <p>Angka 2  <input type="text" name="bil2" class="bil"></p>
+                <input type="button" value="Hitung" class="tombol" onClick="hitung()">
+                <p>Hasil <input type="text" name="hasil" disabled="true" class="bil"></p>
+        </div>
+
+        <script>
+            function hitung(){
+
+            var myForm = document.form1;
+            var bil1=eval(myForm.bil1.value);
+            var bil2=eval(myForm.bil2.value);
+            var operasi= myForm.opt.value;
+            if (operasi == "tambah") {
+            var hasil = bil1 + bil2;
+            } else if (operasi == "kurang") {
+            var hasil = bil1 - bil2;
+            } else if (operasi == "kali") {
+            var hasil = bil1 * bil2;
+            } else if (operasi == "bagi") {
+            var hasil = bil1 / bil2;
+            }
+            myForm.hasil.value = hasil;
+            myForm.bil1.value = "";
+            myForm.bil2.value = "";
+            }
+            
+        </script>
+    </body>
+</html>
